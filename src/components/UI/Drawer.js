@@ -20,7 +20,7 @@ export const Backdrop = () =>{
 const Drawer = ({scrolled,pricingRef, toggleMenu, setTogglemenu, featureRef, headerRef, scrollToSection}) => {
     return (
         <>
-        <div className="fixed lg:hidden right-0 bg-neutral-900 z-50 top-0 h-full w-64 pt-6 animate-moveToLeft">
+        <div className="fixed lg:hidden right-0 overflow-hidden bg-neutral-900 z-50 top-0 h-screen w-64 pt-6 animate-moveToLeft">
             <div className='flex justify-end mr-6'>
                 {toggleMenu&&<AiOutlineClose onClick={()=>setTogglemenu(false)} className={`block lg:hidden text-white text-4xl `} />}
             </div>
