@@ -12,7 +12,7 @@ const Main = () => {
   const trainersRef = useRef();
 
   return (
-    <div>
+    <div className='overflow-hidden'>
         {/* <Backdrop /> */}
         <div ref={headerRef} className="w-full bg-hero bg-cover bg-center bg-no-repeat">
             <Navbar featureRef={featureRef} headerRef={headerRef} pricingRef={pricingRef} trainersRef={trainersRef} /> 

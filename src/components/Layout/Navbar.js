@@ -13,7 +13,7 @@ const Navbar = ({featureRef, headerRef,pricingRef,trainersRef}) => {
     if(window!==undefined){
       let windowHeight = window.scrollY;
       if(windowHeight>50){
-        setNavstyle("fixed z-50 bg-zinc-900 w-full top-0");
+        setNavstyle("fixed z-30 bg-zinc-900 w-full top-0");
         setScrolled(true)
       }
       else{
