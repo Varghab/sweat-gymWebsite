@@ -6,7 +6,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Contact = () => {
     return (
-        <div className='w-11/12 mx-auto flex flex-col lg:flex-row justify-around items-center text-white p-6 gap-14 lg:gap-0'>
+        <div className='w-11/12 mx-auto flex flex-col lg:flex-row md:flex-row justify-around items-center text-white p-6 gap-14 lg:gap-0'>
             <div className='flex flex-col gap-6 justify-center order-2 lg:order-1'>
                 <div className='flex items-center gap-3'>
                     <GoLocation className='text-2xl lg:text-4xl' />

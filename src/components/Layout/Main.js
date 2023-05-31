@@ -6,6 +6,7 @@ import Pricing from '../Pricing'
 import Trainers from './Trainers'
 import FAQs from './FAQs'
 import Contact from './Contact'
+import Footer from './Footer'
 
 const Main = () => {
   const featureRef = useRef();
@@ -36,6 +37,9 @@ const Main = () => {
         </div>
         <div ref={contactRef} className='w-full bg-neutral-950 lg:py-10 py-6'>
             <Contact />
+        </div>
+        <div className='w-full bg-neutral-900 lg:pt-10 pt-6'>
+            <Footer />
         </div>
         
     </div>
