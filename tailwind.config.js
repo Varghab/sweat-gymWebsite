@@ -13,6 +13,7 @@ module.exports = {
     },
       width:{
         'hero-text-container': "600px",
+        'faq-text-container': "400px",
       
       },
       height:{

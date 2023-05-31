@@ -4,18 +4,22 @@ import Header from './Header'
 import Features from './Features'
 import Pricing from '../Pricing'
 import Trainers from './Trainers'
+import FAQs from './FAQs'
+import Contact from './Contact'
 
 const Main = () => {
   const featureRef = useRef();
   const headerRef = useRef();
   const pricingRef = useRef();
   const trainersRef = useRef();
+  const faqRef = useRef();
+  const contactRef = useRef();
 
   return (
-    <div className='overflow-hidden'>
+    <div>
         {/* <Backdrop /> */}
         <div ref={headerRef} className="w-full bg-hero bg-cover bg-center bg-no-repeat">
-            <Navbar featureRef={featureRef} headerRef={headerRef} pricingRef={pricingRef} trainersRef={trainersRef} /> 
+            <Navbar contactRef={contactRef} faqRef={faqRef} featureRef={featureRef} headerRef={headerRef} pricingRef={pricingRef} trainersRef={trainersRef} /> 
             <Header />
         </div>
         <div ref={featureRef} className="w-full bg-neutral-900 lg:py-8">
@@ -26,6 +30,12 @@ const Main = () => {
         </div>     
         <div ref={trainersRef} className="w-full bg-neutral-900 lg:py-10 py-6">
             <Trainers />
+        </div>
+        <div ref={faqRef} className="w-full bg-neutral-900 lg:py-10 py-6">
+            <FAQs />
+        </div>
+        <div ref={contactRef} className='w-full bg-neutral-950 lg:py-10 py-6'>
+            <Contact />
         </div>
         
     </div>

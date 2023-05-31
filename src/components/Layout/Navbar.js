@@ -5,7 +5,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Drawer from '../UI/Drawer';
 import { Backdrop } from '../UI/Drawer';
 
-const Navbar = ({featureRef, headerRef,pricingRef,trainersRef}) => {
+const Navbar = ({featureRef, contactRef,headerRef,pricingRef,trainersRef, faqRef}) => {
   const [navStyle,setNavstyle] = useState('relative');
   const [scrolled, setScrolled] = useState(false);
   const [toggleMenu, setTogglemenu] = useState(false);
@@ -38,7 +38,7 @@ const Navbar = ({featureRef, headerRef,pricingRef,trainersRef}) => {
   
   return (
     <>
-    {toggleMenu&&<Backdrop />}
+    {toggleMenu&&<Backdrop setTogglemenu={setTogglemenu} />}
     <div>
     <nav className={`${navStyle} w-11/12 mx-auto flex flex-row justify-between items-center lg:px-4 px-0`}>
       <div>
@@ -50,8 +50,8 @@ const Navbar = ({featureRef, headerRef,pricingRef,trainersRef}) => {
             <li onClick={() => scrollToSection(featureRef)} className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>Our services</li>
             <li onClick={()=> scrollToSection(pricingRef)} className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>Membership</li>
             <li onClick={()=> scrollToSection(trainersRef)} className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>Trainers</li>
-            <li className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>FAQs</li>
-            <li className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>Contact</li>
+            <li onClick={()=> scrollToSection(faqRef)} className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>FAQs</li>
+            <li onClick={()=> scrollToSection(contactRef)} className='text-md lg:text-lg text-zinc-300 font-medium cursor-pointer py-4 transition-[color] duration-300 hover:text-neutral-50 relative after:transition-all after:duration-200 ease-in-out after:absolute after:bg-orange-600 after:w-0 after:rounded-lg hover:after:w-full after:bottom-0 after:left-0 after:h-1'>Contact</li>
         </ul>
       </div>
       <div>
@@ -60,7 +60,7 @@ const Navbar = ({featureRef, headerRef,pricingRef,trainersRef}) => {
       </div>
       
     </nav>
-    {toggleMenu?<Drawer pricingRef={pricingRef} featureRef={featureRef} headerRef={headerRef} scrollToSection={scrollToSection} scrolled={scrolled} toggleMenu={toggleMenu} setTogglemenu={setTogglemenu} />:null}
+    {toggleMenu?<Drawer faqRef={faqRef} trainersRef={trainersRef} pricingRef={pricingRef} featureRef={featureRef} headerRef={headerRef} scrollToSection={scrollToSection} scrolled={scrolled} toggleMenu={toggleMenu} setTogglemenu={setTogglemenu} />:null}
     </div>
     </>
   )

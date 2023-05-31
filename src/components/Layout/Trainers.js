@@ -9,7 +9,7 @@ const Trainers = () => {
                 <h1 className="text-3xl lg:text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-br from-white to-orange-600">Meet Our Trainers</h1>
             </div>
             <div className='flex flex-col lg:flex-row justify-center mt-8 lg:mt-14 gap-4'>
-                {trainersData.map((data,_)=> <TrainerCard name={data.name} desc={data.desc} experience={data.experience} />)}
+                {trainersData.map((data, index)=> <TrainerCard profileImage={data.profileImage} index={index} key={data.id} name={data.name} desc={data.desc} experience={data.experience} />)}
             </div>
         </div>
     )

@@ -9,15 +9,15 @@ import { BsFacebook } from 'react-icons/bs'
 import { BsInstagram } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
 
-export const Backdrop = () =>{
+export const Backdrop = ({setTogglemenu}) =>{
     return(
-        <div className="bg-gradient-to-br from-neutral-900/80 to bg-orange-400/10 h-full w-full fixed z-40">
+        <div onClick={()=> setTogglemenu((p)=>!p)} className="bg-gradient-to-br from-neutral-900/80 to bg-orange-400/10 h-full w-full fixed z-40">
         </div>
     )
 }
 
 
-const Drawer = ({scrolled,pricingRef, toggleMenu, setTogglemenu, featureRef, headerRef, scrollToSection}) => {
+const Drawer = ({faqRef,trainersRef,pricingRef, toggleMenu, setTogglemenu, featureRef, headerRef, scrollToSection}) => {
     return (
         <div className="fixed lg:hidden right-0 overflow-hidden bg-neutral-900 z-50 top-0 h-screen w-64 pt-6 animate-moveToLeft">
             <div className='flex justify-end mr-6'>
@@ -25,11 +25,11 @@ const Drawer = ({scrolled,pricingRef, toggleMenu, setTogglemenu, featureRef, hea
             </div>
             <div className='mt-6'>
                 <ul className='text-white flex flex-col w-11/12 mx-auto text-xl'>
-                    <li onClick={()=>scrollToSection(headerRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><AiOutlineHome />Home</li>
+                    <li onClick={()=> scrollToSection(headerRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><AiOutlineHome />Home</li>
                     <li onClick={()=> scrollToSection(featureRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><RiHandCoinLine/>Our services</li>
                     <li onClick={()=> scrollToSection(pricingRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><IoPeopleOutline/> Membership</li>
-                    <li className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><GiWeightLiftingUp/> Trainers</li>
-                    <li className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><FaQuestion/> FAQs</li>
+                    <li onClick={()=> scrollToSection(trainersRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><GiWeightLiftingUp/> Trainers</li>
+                    <li onClick={()=> scrollToSection(faqRef)} className='p-3 rounded-xl hover:bg-neutral-700 flex items-center gap-3'><FaQuestion/> FAQs</li>
                 </ul>
             </div>
             <div className='mt-5 px-5'>
