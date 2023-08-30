@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-      'hero': "linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(216, 107, 40, 0.38)), url('./images/hero.jpg')",
+      'hero-desktop': "linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(216, 107, 40, 0.38)), url('./images/hero.jpg')",
+      'hero-mobile' : "linear-gradient(to right bottom, rgba(0, 0, 0, 0.75), rgba(216, 107, 40, 0.38)), url('./images/hero-mobile.jpg')",
       'profile1': "url('./images/pexels-arthouse-studio-4621419.jpg')",
       'profile2': "url('./images/pexels-mikhail-nilov-6740102.jpg')",
       'profile3': "url('./images/pexels-vazhnik-7562313.jpg')",

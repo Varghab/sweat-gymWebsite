@@ -19,7 +19,7 @@ const Main = () => {
   return (
     <div>
         {/* <Backdrop /> */}
-        <div ref={headerRef} className="w-full bg-hero bg-cover bg-center bg-no-repeat">
+        <div ref={headerRef} className="w-full bg-hero-mobile md:bg-hero-desktop bg-cover bg-center bg-no-repeat">
             <Navbar contactRef={contactRef} faqRef={faqRef} featureRef={featureRef} headerRef={headerRef} pricingRef={pricingRef} trainersRef={trainersRef} /> 
             <Header />
         </div>
